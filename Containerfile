@@ -8,7 +8,7 @@ COPY container.yaml /tmp
 RUN --mount=type=bind,rw,src=/,dst=/contents,from=install \
     --mount=type=bind,rw,z,src=export,dst=/export \
     flatpak-module container-export \
-        --containerspec=/tmp/container-archive.yaml \
+        --containerspec=/tmp/container.yaml \
         --resultdir=/export
 
 FROM oci-archive:export/out.ociarchive
