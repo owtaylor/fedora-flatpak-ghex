@@ -5,7 +5,7 @@ RUN dnf5 -y install ghex
 FROM quay.io/redhat-user-workloads/otaylor-tenant/flatpak-module-tools/flatpak-module-tools@sha256:d7d59011e1c0730e420655aea712dacb73e88898ea89cfe004f54b7be0fe44ae as export
 
 COPY container.yaml /tmp
-RUN --mount=type=bind,src=/,dst=/contents,from=install \
+RUN --mount=type=bind,rw,src=/,dst=/contents,from=install \
     --mount=type=bind,rw,z,src=export,dst=/export \
     flatpak-module container-export \
         --containerspec=/tmp/container-archive.yaml \
