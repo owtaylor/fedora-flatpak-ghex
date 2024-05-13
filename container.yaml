@@ -1,0 +1,16 @@
+flatpak:
+    id: org.gnome.GHex
+    branch: stable
+    runtime-name: flatpak-runtime
+    runtime-version: f40
+    packages:
+    - ghex
+    command: ghex
+    finish-args: |-
+        --device=dri
+        --share=ipc
+        --socket=fallback-x11
+        --socket=wayland
+        --talk-name=org.gtk.vfs.*
+        --filesystem=xdg-run/gvfsd
+        --filesystem=host
