@@ -2,7 +2,7 @@ FROM quay.io/redhat-user-workloads/otaylor-tenant/flatpak-module-tools/fedora-fl
 
 RUN dnf5 -y install ghex
 
-FROM quay.io/redhat-user-workloads/otaylor-tenant/flatpak-module-tools/flatpak-module-tools@sha256:d7d59011e1c0730e420655aea712dacb73e88898ea89cfe004f54b7be0fe44ae as export
+FROM quay.io/redhat-user-workloads/otaylor-tenant/flatpak-module-tools/flatpak-module-tools@sha256:424658e619c1d7c55fc938b02364262b2ef540eb0d3c30047b1ab19bf1b3b221 as export
 
 COPY container.yaml /tmp
 RUN --mount=type=bind,rw,src=/,dst=/contents,from=install \
