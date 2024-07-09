@@ -1,4 +1,4 @@
-FROM quay.io/redhat-user-workloads/otaylor-tenant/flatpak-module-tools/fedora-flatpak-runtime@sha256:aca5ffd11311f52ea12bee0a7cf5698c24fc14b01be39ca9eb30aa5c0b01e4c6 as install
+FROM quay.io/redhat-user-workloads/otaylor-tenant/flatpak-module-tools/fedora-flatpak-runtime@sha256:2b15ac8bc978703c95ba777c6ff05a051cf55c932d20803c615e5cbf22fca375 as install
 
 RUN dnf5 -y install ghex
 
